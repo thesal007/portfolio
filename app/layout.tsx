@@ -1,30 +1,29 @@
 import type { Metadata } from "next";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import { Navbar } from "@/components/ui/src/navbar";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/ui/navbar";
 
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  weight: '400',
-  subsets: ["latin"],   
-  display: "swap",    
-  style: ["normal"]
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
   title: "DevPortfolio",
-  description: "Building digital experiences that matter",
+  description: "Full-stack developer portfolio",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={inter.className}>
-      <body className="bg-[#0a0a0f] text-white"> 
-        <AppRouterCacheProvider>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-        </AppRouterCacheProvider>
+    <html lang="en" className={jetbrainsMono.variable}>
+      <body className="font-mono antialiased">
+        <Navbar />
+        {children}
       </body>
     </html>
   );
