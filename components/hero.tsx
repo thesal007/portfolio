@@ -1,5 +1,6 @@
 import { Code, Terminal, ArrowRight } from "lucide-react";
 import { StatusBadge } from "./status-badge";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -47,7 +48,7 @@ export default function Hero() {
           </div>
 
           <div className="row-span-2 w-40 overflow-hidden rounded-xl border border-outline-variant grayscale hover:grayscale-0 transition-all duration-500">
-            <img
+            <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7-QB1cnqYoB2FvrONoLm6eSW2gQ1XJqGT_lDUxuAp0GMzWo8y-MHKin23pnhhRp8WvbM9avsuPNRymH-5Vo7eCDvqx4D3asbfPdqjvXfxiWbSJPkUBrnIS-HBI7GBgs0b9rvOS2nmDr2JVv98yxDPyDXOkCGnCxBml4POUfnyPoMHW69z19bqKiTm3S9UFFMTJ3d-ade0zYnxJyCPlheoPFxBDF3y8miKI627Nof7xC62lMtQ0KHFFdWcNG2LcAKPxkcoFNxq3DhE"
               alt="Mechanical keyboard close-up"
               className="w-full h-full object-cover"

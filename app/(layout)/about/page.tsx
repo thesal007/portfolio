@@ -1,6 +1,5 @@
 import HeroSection from "@/components/hero-section";
 import TechArsenal from "@/components/tech";
-import { Badge } from "lucide-react";
 
 export default function About() {
   return (
@@ -8,6 +7,6 @@ export default function About() {
       <HeroSection />
       <div className="w-full border-t border-outline-variant my-stack-lg"></div>
       <TechArsenal />
-      </main>
+    </main>
   );
 }
