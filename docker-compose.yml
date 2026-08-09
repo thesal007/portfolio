@@ -1,8 +1,25 @@
-version: "3.9"
 services:
-  portfolio:
-    build: .
+  web:
+    build:
+      context: .
+      target: dev
     ports:
       - "3000:3000"
+    volumes:
+      # Mount your local source into the container so edits show up live.
+      - .:/app
+      # Anonymous volume that "shields" node_modules from the bind mount
+      # above — without this, your host's node_modules (if it even exists,
+      # or if it was installed for a different OS/architecture) would
+      # overwrite the Linux-built node_modules already installed inside
+      # the container during `docker build`.
+      - /app/node_modules
+      - /app/.next
     environment:
-      - NODE_ENV=production
+      # Some filesystems (Docker Desktop on macOS/Windows, WSL2 bind mounts)
+      # don't reliably forward native file-change events into the
+      # container. Polling makes Next's watcher check for changes instead
+      # of waiting for an event that may never arrive.
+      - WATCHPACK_POLLING=true
+    stdin_open: true
+    tty: true
