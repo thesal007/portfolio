@@ -35,8 +35,8 @@ export default function HeroSection() {
         <p className="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-xl">
           I am a full-stack developer based in San Francisco, specializing in
           building high-performance web applications. My journey started in
-          2018, and since then, I've focused on bridging the gap between elegant
-          design and robust architecture.
+          2018, and since then, I&apos;ve focused on bridging the gap between
+          elegant design and robust architecture.
         </p>
 
         <StatusBadge
@@ -52,6 +52,8 @@ export default function HeroSection() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7-QB1cnqYoB2FvrONoLm6eSW2gQ1XJqGT_lDUxuAp0GMzWo8y-MHKin23pnhhRp8WvbM9avsuPNRymH-5Vo7eCDvqx4D3asbfPdqjvXfxiWbSJPkUBrnIS-HBI7GBgs0b9rvOS2nmDr2JVv98yxDPyDXOkCGnCxBml4POUfnyPoMHW69z19bqKiTm3S9UFFMTJ3d-ade0zYnxJyCPlheoPFxBDF3y8miKI627Nof7xC62lMtQ0KHFFdWcNG2LcAKPxkcoFNxq3DhE"
             alt="Developer typing on keyboard"
             className="w-full h-full object-cover"
+            width={300}
+            height={300}
           />
         </Card>
       </div>
