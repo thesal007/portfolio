@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -80,4 +80,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        run: echo "TODO: add deploy step (SSH pull+restart, kubectl set image, fly deploy, etc.)"
+        run: |
+          echo "TODO: add deploy step (SSH pull+restart, kubectl set image, fly deploy, etc.)"

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
+  { href: "/project", label: "Project" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -13,7 +13,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-surface-container-low border-b border-outline-variant/60">
+    <header className="sticky top-0 z-50 bg-gray-200 border-b border-outline-variant/60">
       <nav className="max-w-container-max mx-auto px-gutter h-[72px] flex items-center justify-between">
         <Link
           href="/"
@@ -43,7 +43,7 @@ export default function Navbar() {
 
         <Link
           href="/resume.pdf"
-          className="bg-primary text-on-primary font-label-caps text-label-caps font-semibold px-5 py-2 rounded-md hover:brightness-110 transition-all"
+          className="bg-blue-500 text-white font-label-caps text-label-caps font-semibold px-5 py-2 rounded-md hover:brightness-110 transition-all"
         >
           Resume
         </Link>

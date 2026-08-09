@@ -1,4 +1,5 @@
 import { Code, Terminal, ArrowRight } from "lucide-react";
+import { StatusBadge } from "./status-badge";
 
 export default function Hero() {
   return (
@@ -11,9 +12,10 @@ export default function Hero() {
         <div className="max-w-3xl text-left">
           <div className="flex items-center gap-2 mb-stack-md">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="font-label-caps text-label-caps text-primary">
-              Available for new opportunities
-            </span>
+            <StatusBadge
+              status="active"
+              description="Available for new opportunities"
+            />
           </div>
 
           <h1 className="font-display-xl text-display-xl mb-stack-md text-on-surface">
@@ -23,8 +25,8 @@ export default function Hero() {
 
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-xl">
             Full-stack developer specialized in high-performance web
-            architectures, clean code principles, and intuitive user
-            interface design.
+            architectures, clean code principles, and intuitive user interface
+            design.
           </p>
 
           <div className="flex flex-wrap gap-stack-md">
